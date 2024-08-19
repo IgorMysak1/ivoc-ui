@@ -1,5 +1,4 @@
 **Important:**
-- When I am switching between tabs, it is occurred some redundant request
 - Add collections (FE, BE)
 - Add Telegram (FE, BE)
 - Deploy everything

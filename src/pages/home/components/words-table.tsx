@@ -1,10 +1,11 @@
 import { Table } from "@/components";
 import { Word } from "@/types/word.ts";
 import { columns } from "../constant.tsx";
-import { useGetAllWords } from "@/pages/home/data/useGetAllwords.ts";
+import { useGetAllWords } from "../data/useGetAllwords.ts";
+import { WordsPriority } from "@/types";
 
-export function WordsTable() {
-  const { data, isPending, error } = useGetAllWords();
+export function WordsTable({ tab }: { tab: WordsPriority }) {
+  const { data, isPending, error } = useGetAllWords(tab);
 
   return (
     <Table<Word>

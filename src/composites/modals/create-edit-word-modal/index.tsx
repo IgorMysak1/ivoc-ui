@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Row } from "@tanstack/react-table";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 interface Props {
   open: boolean;
@@ -33,13 +34,14 @@ export function CreateEditWordModal({
   onSubmit,
   mode,
 }: Props) {
+  const { tab } = useParams();
   const form = useForm<SchemaType>({
     resolver: zodResolver(wordSchema),
     defaultValues: {
       word: row?.original.word ?? "",
       translation: row?.original.translation ?? "",
       type: row?.original.type ?? WordsTypes.NOUN,
-      wordsPriority: row?.original.wordsPriority ?? WordsPriority.ALL,
+      wordsPriority: row?.original.wordsPriority ?? (tab as WordsPriority),
     },
     resetOptions: {
       keepDefaultValues: true,

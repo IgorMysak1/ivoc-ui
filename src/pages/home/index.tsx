@@ -5,7 +5,7 @@ import { Routes, RoutesParams, WordsPriority } from "@/types";
 
 const tabs: TabsProps[] = Object.values(WordsPriority).map((tab) => ({
   tabName: tab,
-  content: <WordsTable />,
+  content: <WordsTable tab={tab} />,
 }));
 
 export const HomePage = () => {

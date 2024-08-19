@@ -34,12 +34,14 @@ export const Header = () => {
 
   return (
     <>
-      <CreateEditWordModal
-        mode={"create"}
-        open={createDialogState}
-        onOpenChange={setCreateDialogState}
-        onSubmit={onSubmit}
-      />
+      {createDialogState && (
+        <CreateEditWordModal
+          mode={"create"}
+          open={createDialogState}
+          onOpenChange={setCreateDialogState}
+          onSubmit={onSubmit}
+        />
+      )}
       <div className="flex justify-between items-center py-3">
         <Link to={homeRoute}>
           <p className="text-3xl font-bold  text-emerald-50">Ivoc</p>

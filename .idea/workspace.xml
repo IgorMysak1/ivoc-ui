@@ -6,16 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7c5278fb-20d3-4df7-bc31-3453dcf4094d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/Todo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/composites/header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/composites/header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useToken.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/components/actions-cell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/actions-cell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composites/modals/create-edit-word-modal/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/composites/modals/create-edit-word-modal/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composites/modals/create-edit-word-modal/words-priority-field.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/composites/modals/create-edit-word-modal/words-priority-field.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/components/words-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/components/words-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/data/useGetAllwords.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/data/useGetAllwords.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/router-rovider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/router-rovider/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
