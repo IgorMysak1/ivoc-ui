@@ -23,8 +23,6 @@ export const Table = <TData extends RowData>({
 }: TableProps<TData>) => {
   const table = useTable<TData>({ data: data ?? [], columns });
 
-  // Todo: Handle it better
-
   if (loading) {
     return <p>Loading</p>;
   }

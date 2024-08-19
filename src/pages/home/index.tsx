@@ -12,8 +12,9 @@ export const HomePage = () => {
   const navigate = useNavigate();
   const { tab } = useParams();
 
-  const changeTab = (value: string) =>
+  const changeTab = (value: string) => {
     navigate(`${Routes.HOME.replace(RoutesParams.TAB, value)}`);
+  };
 
   return (
     <Tabs

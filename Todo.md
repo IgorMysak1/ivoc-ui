@@ -1,12 +1,9 @@
 **Important:**
-- Update Read.md
-- Check if code is good
-- Understand body, query, params
 - When I am switching between tabs, it is occurred some redundant request
-- Add token in headers global
 - Add collections (FE, BE)
 - Add Telegram (FE, BE)
 - Deploy everything
+- Check how pagination works
 
 **After important:**
 - Move search to BE

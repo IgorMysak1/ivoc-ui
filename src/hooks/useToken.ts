@@ -7,5 +7,5 @@ export const useToken = () => {
     setToLS(LocalStorageKeys.AUTH_TOKEN, token);
   };
 
-  return { token: token, setToken };
+  return { token, setToken };
 };

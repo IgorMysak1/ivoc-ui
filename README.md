@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Ivoc UI repository
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`Ivoc` or I Vocabulary - is a platform where you can effortlessly expand your vocabulary. Create an account and start adding words you want to learn. Each word can be categorized as important, less important, or not important.
 
-Currently, two official plugins are available:
+Build custom collections of words and set up automatic flashcards delivered to your Telegram channel. Choose how many words you want to see and how often. Forget about rote learning – just see the words regularly in your Telegram feed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## How to start the project?
+- Clone repo to your PC
+- Ask `.env` file
+- Run `npm run dev` in root folder
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Main technologies on the project 
+- React
+- React Router DOM
+- Typescript
+- TanStack
+- ShadCn
+- Tailwind
+- BE: Node.js + Express.js + MongoDB, here is [repo](https://github.com/IgorMysak1/ivoc-api)

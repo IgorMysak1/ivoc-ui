@@ -18,8 +18,8 @@ interface Props {
 }
 
 export const ActionsCell = ({ row }: Props) => {
-  const [editState, setEditState] = useState(false);
-  const [deleteState, setDeleteState] = useState(false);
+  const [editDialogState, setEditDialogState] = useState(false);
+  const [deleteDialogState, setDeleteDialogState] = useState(false);
 
   const { mutate: editWord } = useEditWord();
 
@@ -28,7 +28,7 @@ export const ActionsCell = ({ row }: Props) => {
       { ...values, id: row?.original._id ?? "" },
       {
         onSuccess: () => {
-          setEditState(false);
+          setEditDialogState(false);
         },
       },
     );
@@ -36,20 +36,20 @@ export const ActionsCell = ({ row }: Props) => {
 
   return (
     <>
-      {editState && (
+      {editDialogState && (
         <CreateEditWordModal
-          open={editState}
-          onOpenChange={setEditState}
+          open={editDialogState}
+          onOpenChange={setEditDialogState}
           onSubmit={onSubmit}
           row={row}
           mode="edit"
         />
       )}
-      {deleteState && (
+      {deleteDialogState && (
         <DeleteWordModal
           row={row}
-          open={deleteState}
-          onOpenChange={setDeleteState}
+          open={deleteDialogState}
+          onOpenChange={setDeleteDialogState}
         />
       )}
       <DropdownMenu>
@@ -59,10 +59,10 @@ export const ActionsCell = ({ row }: Props) => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => setEditState(true)}>
+          <DropdownMenuItem onClick={() => setEditDialogState(true)}>
             Edit
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setDeleteState(true)}>
+          <DropdownMenuItem onClick={() => setDeleteDialogState(true)}>
             Delete
           </DropdownMenuItem>
           <DropdownMenuItem>

@@ -15,16 +15,14 @@ import { useCreateWord } from "@/composites/header/data/useCreateWord.ts";
 import { SchemaType } from "@/composites/modals/create-edit-word-modal/form-schema.ts";
 
 export const Header = () => {
-  const [createState, setCreateState] = useState(false);
+  const [createDialogState, setCreateDialogState] = useState(false);
   const navigate = useNavigate();
 
   const { mutate: createWord } = useCreateWord();
 
   const onSubmit = (values: SchemaType) => {
     createWord(values, {
-      onSuccess: () => {
-        setCreateState(false);
-      },
+      onSuccess: () => setCreateDialogState(false),
     });
   };
   const logOut = () => {
@@ -32,18 +30,18 @@ export const Header = () => {
     navigate(Routes.LOG_IN);
   };
 
+  const homeRoute = `${Routes.HOME.replace(RoutesParams.TAB, WordsPriority.ALL)}`;
+
   return (
     <>
       <CreateEditWordModal
         mode={"create"}
-        open={createState}
-        onOpenChange={setCreateState}
+        open={createDialogState}
+        onOpenChange={setCreateDialogState}
         onSubmit={onSubmit}
       />
       <div className="flex justify-between items-center py-3">
-        <Link
-          to={`${Routes.HOME.replace(RoutesParams.TAB, WordsPriority.ALL)}`}
-        >
+        <Link to={homeRoute}>
           <p className="text-3xl font-bold  text-emerald-50">Ivoc</p>
         </Link>
         <div className="flex items-center gap-4">
@@ -54,7 +52,9 @@ export const Header = () => {
             <UserRound />
           </Link>
           <ThemeToggle />
-          <Button onClick={() => setCreateState(true)}>Add new word</Button>
+          <Button onClick={() => setCreateDialogState(true)}>
+            Add new word
+          </Button>
         </div>
       </div>
     </>

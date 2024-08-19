@@ -1,4 +1,4 @@
-import { Tabs as T, TabsContent, TabsList, TabsTrigger } from "@/ui";
+import { Tabs as ShadCnTabs, TabsContent, TabsList, TabsTrigger } from "@/ui";
 import React from "react";
 
 export interface TabsProps {
@@ -20,7 +20,7 @@ export const Tabs = ({
   tabs,
 }: Props) => {
   return (
-    <T
+    <ShadCnTabs
       onValueChange={onChange}
       value={value}
       defaultValue={defaultValue ?? tabs[0].tabName}
@@ -40,6 +40,6 @@ export const Tabs = ({
           {content}
         </TabsContent>
       ))}
-    </T>
+    </ShadCnTabs>
   );
 };
