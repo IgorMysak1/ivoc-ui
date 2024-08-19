@@ -1,8 +1,9 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { createWordApi } from "./api.ts";
-import { useNotifications, useMutation } from "@/hooks";
+import { useNotifications } from "@/hooks";
 import { QueryKey, Word } from "@/types";
 import { WordVariables } from "./type.ts";
+import { useMutation } from "@/api";
 
 export const useCreateWord = () => {
   const { showSuccessNotification, showErrorNotification } = useNotifications();

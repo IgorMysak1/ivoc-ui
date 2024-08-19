@@ -1,16 +1,10 @@
-import axios from "axios";
-
 import { ApiResponse } from "@/types";
-import { GetMeResponse, GetMeVariables } from "./type.ts";
-import { getUrlForApi } from "@/utils";
+import { GetMeResponse } from "./type.ts";
+import apiClient from "@/api";
 
-export const getMeApi = async ({
-  token,
-}: GetMeVariables): ApiResponse<GetMeResponse> => {
+export const getMeApi = async (): ApiResponse<GetMeResponse> => {
   try {
-    const { data } = await axios.get(getUrlForApi("/api/auth/me"), {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const { data } = await apiClient.get("/api/auth/me");
     return data;
   } catch (err) {
     throw new Error(err as undefined);

@@ -19,7 +19,7 @@ export const ProtectedRoutes = ({
   const { setUser } = useUser();
 
   // Don't make request if isProtectedPage is false
-  const { data, isSuccess, isLoading } = useGetMe({ token, isProtectedPage });
+  const { data, isSuccess, isLoading } = useGetMe({ isProtectedPage });
 
   if (!isProtectedPage) {
     return children;

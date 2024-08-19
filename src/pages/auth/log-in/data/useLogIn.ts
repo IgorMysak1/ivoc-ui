@@ -1,8 +1,9 @@
 import { logInApi } from "./api.ts";
 import { useNavigate } from "react-router-dom";
 import { Routes, RoutesParams, WordsPriority } from "@/types";
-import { useToken, useNotifications, useMutation } from "@/hooks";
+import { useToken, useNotifications } from "@/hooks";
 import { LogInResponse, LogInVariables } from "./type.ts";
+import { useMutation } from "@/api";
 
 export const useLogIn = () => {
   const { showSuccessNotification, showErrorNotification } = useNotifications();

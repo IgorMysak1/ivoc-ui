@@ -3,5 +3,3 @@ export interface GetMeResponse {
   firstName: string;
   email: string;
 }
-
-export type GetMeVariables = { token: string };

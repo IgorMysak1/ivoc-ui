@@ -13,24 +13,19 @@ import { useState } from "react";
 import { removeFromLS } from "@/utils";
 import { useCreateWord } from "@/composites/header/data/useCreateWord.ts";
 import { SchemaType } from "@/composites/modals/create-edit-word-modal/form-schema.ts";
-import { useToken } from "@/hooks";
 
 export const Header = () => {
   const [createState, setCreateState] = useState(false);
   const navigate = useNavigate();
-  const { token } = useToken();
 
   const { mutate: createWord } = useCreateWord();
 
   const onSubmit = (values: SchemaType) => {
-    createWord(
-      { ...values, token },
-      {
-        onSuccess: () => {
-          setCreateState(false);
-        },
+    createWord(values, {
+      onSuccess: () => {
+        setCreateState(false);
       },
-    );
+    });
   };
   const logOut = () => {
     removeFromLS(LocalStorageKeys.AUTH_TOKEN);

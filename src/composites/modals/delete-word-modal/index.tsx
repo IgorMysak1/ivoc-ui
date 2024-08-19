@@ -9,7 +9,6 @@ import {
   Button,
 } from "@/ui";
 import { useDeleteWord } from "./useDeleteWord.ts";
-import { useToken } from "@/hooks";
 
 interface Props {
   row: Row<Word> | undefined;
@@ -18,12 +17,11 @@ interface Props {
 }
 
 export function DeleteWordModal({ row, open, onOpenChange }: Props) {
-  const { token } = useToken();
   const { mutate: deleteWord } = useDeleteWord();
 
   const onDelete = () => {
     deleteWord(
-      { token, id: row?.original._id ?? "" },
+      { id: row?.original._id ?? "" },
       {
         onSuccess: () => {
           onOpenChange(false);

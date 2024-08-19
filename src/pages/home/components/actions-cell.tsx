@@ -8,7 +8,6 @@ import {
 import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 import { Word } from "@/types";
 import { Row } from "@tanstack/react-table";
-import { useToken } from "@/hooks";
 import { CreateEditWordModal, DeleteWordModal } from "@/composites";
 import { useEditWord } from "@/pages/home/data/useEditWord.ts";
 import { SchemaType } from "@/composites/modals/create-edit-word-modal/form-schema.ts";
@@ -21,13 +20,12 @@ interface Props {
 export const ActionsCell = ({ row }: Props) => {
   const [editState, setEditState] = useState(false);
   const [deleteState, setDeleteState] = useState(false);
-  const { token } = useToken();
 
   const { mutate: editWord } = useEditWord();
 
   const onSubmit = (values: SchemaType) => {
     editWord(
-      { ...values, token, id: row?.original._id ?? "" },
+      { ...values, id: row?.original._id ?? "" },
       {
         onSuccess: () => {
           setEditState(false);
